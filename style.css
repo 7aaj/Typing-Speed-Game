@@ -1,0 +1,240 @@
+:root {
+  --main-color: #2196f3;
+  --level: #4caf50;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.game {
+  background-color: #eee;
+  min-height: 100vh;
+}
+.high-score {
+  width: fit-content;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #009688;
+  color: white;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: default;
+}
+
+.game h3 {
+  width: fit-content;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #009688;
+  color: white;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: default;
+}
+
+.levels {
+  height: 75px;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.levels li {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0px 8px 10px 0px #0000007d;
+}
+
+.levels li:nth-child(2) {
+  background-color: var(--main-color);
+}
+.levels li:nth-child(3) {
+  background-color: red;
+}
+
+.levels li.active {
+  border: solid 1px black;
+  scale: 1.2;
+}
+
+.container {
+  padding: 0 15px;
+  margin: auto;
+}
+/*small screens */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+/*medium screens */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+/* large screen */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+/* xlarge screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.name {
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.message {
+  background-color: white;
+  padding: 15px;
+  margin: 15px 0;
+  text-align: center;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.message span {
+  font-weight: bold;
+  color: var(--level);
+}
+.message span::before {
+  content: "[ ";
+}
+.message span::after {
+  content: " ]";
+}
+
+.start {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: #009688;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.the-word {
+  text-align: center;
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 60px;
+  user-select: none;
+}
+
+.input {
+  width: 100%;
+  display: block;
+  margin: 15px 0;
+  padding: 15px;
+  border: 3px solid var(--main-color);
+  text-align: center;
+  font-size: 20px;
+  caret-color: var(--main-color);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.upcoming-words {
+  background-color: white;
+  margin: 15px 0;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.upcoming-words div {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  margin: 4px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.control {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+}
+.control span {
+  font-weight: bold;
+  color: #009688;
+}
+
+.finish {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  padding: 15px;
+}
+.finish .good {
+  color: var(--main-color);
+}
+.finish .bad {
+  color: red;
+}
+
+.play-again {
+  display: block;
+  width: fit-content;
+  margin: 25px auto;
+  padding: 15px 20px;
+  background-color: #009688;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+}
